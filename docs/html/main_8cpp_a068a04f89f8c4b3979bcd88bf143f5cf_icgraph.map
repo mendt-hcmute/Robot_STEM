@@ -1,0 +1,19 @@
+<map id="client" name="client">
+<area shape="rect" id="Node000001" title=" " alt="" coords="594,92,646,118"/>
+<area shape="rect" id="Node000002" href="$bsp_8cpp.html#a3b4b1553d0ac2f8cd65642dc21bf5729" title="Kết nối đến broker MQTT." alt="" coords="417,92,546,118"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="579,108,546,108,546,102,579,102"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae204b8353ddcb7c12c66695341624958" title="Task to handle MQTT communication." alt="" coords="107,66,182,93"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="591,83,569,67,545,54,460,23,389,9,355,8,319,12,231,31,194,48,164,68,161,63,191,43,229,26,318,7,355,3,390,4,461,18,547,49,572,63,594,79"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,142,59,169"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="593,130,571,145,547,157,461,184,391,193,320,190,230,184,135,174,59,163,60,157,136,169,230,178,320,185,391,187,460,179,545,152,568,140,590,126"/>
+<area shape="rect" id="Node000005" href="$bsp_8cpp.html#a892df614fcae50013ec63c023f2480b3" title="Gửi dữ liệu cảm biến đến broker MQTT." alt="" coords="230,41,369,68"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="578,92,545,82,454,67,369,60,370,54,455,62,546,77,580,87"/>
+<area shape="rect" id="Node000006" href="$bsp_8cpp.html#afe2a977e003c131ad4a2804059fd9005" title="Thiết lập MQTT với server và callback được xác định trước." alt="" coords="256,142,343,169"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="580,123,546,133,437,150,344,157,343,151,437,144,545,128,578,118"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="401,102,182,85,183,80,402,96"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="415,89,350,71,351,66,417,84"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="417,126,344,146,342,141,415,120"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,104,55,144,52,140,109,100"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="215,71,183,76,182,71,214,65"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="241,158,59,158,59,153,241,153"/>
+</map>

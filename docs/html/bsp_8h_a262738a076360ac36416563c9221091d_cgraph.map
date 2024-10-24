@@ -1,0 +1,5 @@
+<map id="left" name="left">
+<area shape="rect" id="Node000001" title="Điều khiển động cơ để xoay sang trái với số bước encoder nhất định." alt="" coords="5,5,45,32"/>
+<area shape="rect" id="Node000002" href="$bsp_8cpp.html#a76a15253ad56619fe851a6e314d9ee5a" title="Đặt lại giá trị của bộ đếm encoder." alt="" coords="93,5,234,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,16,77,16,77,21,45,21"/>
+</map>

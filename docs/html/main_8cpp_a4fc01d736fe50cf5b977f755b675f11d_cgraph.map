@@ -1,0 +1,55 @@
+<map id="setup" name="setup">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,401,59,428"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a068a04f89f8c4b3979bcd88bf143f5cf" title=" " alt="" coords="649,224,701,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="32,400,37,363,48,313,70,260,86,235,105,213,147,182,187,169,285,159,374,146,446,143,516,153,602,182,627,195,649,212,646,216,624,200,600,187,515,158,446,148,375,152,285,164,188,174,150,187,108,217,90,238,75,262,53,315,42,364,37,401"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae204b8353ddcb7c12c66695341624958" title="Task to handle MQTT communication." alt="" coords="134,275,210,301"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="38,400,63,357,83,333,105,311,119,302,122,307,108,316,86,336,68,360,42,402"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#aa6ee707029b0fb6ea1376ff1c3cdc788" title="Task to handle OTA updates." alt="" coords="113,325,230,352"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="49,399,105,362,116,356,119,361,108,366,52,403"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#a217451a0ec75f826e5a2933c3268c7c2" title="Task to handle distance measurements using VL53L0X sensors." alt="" coords="128,376,216,403"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="59,407,112,398,113,403,60,413"/>
+<area shape="rect" id="Node000009" href="$bsp_8cpp.html#ace7721aa996fb57fcc1848a5cd0ada4b" title="Thiết lập các chân encoder và ngắt cho bộ mã hóa (encoder)." alt="" coords="107,427,237,453"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="60,417,92,423,91,428,59,422"/>
+<area shape="rect" id="Node000012" href="$bsp_8cpp.html#aaad95fbeb90643c1c856fadf533c689a" title="Thiết lập các chân I2C cho hai cảm biến VL53L0X." alt="" coords="121,477,222,504"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="52,426,108,463,119,468,116,473,105,468,49,431"/>
+<area shape="rect" id="Node000013" href="$bsp_8cpp.html#afe2a977e003c131ad4a2804059fd9005" title="Thiết lập MQTT với server và callback được xác định trước." alt="" coords="312,173,398,200"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="33,400,41,372,55,334,76,295,105,261,150,231,200,210,250,196,296,189,296,194,252,202,202,215,152,236,108,265,80,298,60,336,46,373,39,402"/>
+<area shape="rect" id="Node000020" href="$bsp_8cpp.html#a29c2aa13f2bbaccceeb33ed39a6ece11" title="Thiết lập Over&#45;The&#45;Air (OTA) cập nhật cho vi điều khiển." alt="" coords="129,528,215,555"/>
+<area shape="poly" id="edge29_Node000001_Node000020" title=" " alt="" coords="42,427,68,470,86,493,108,514,116,519,113,524,105,518,83,497,63,473,38,430"/>
+<area shape="rect" id="Node000021" href="$bsp_8cpp.html#a6ed12a183e9f32f3272e84420633eced" title="Thiết lập các chân PWM cho động cơ." alt="" coords="116,579,228,605"/>
+<area shape="poly" id="edge30_Node000001_Node000021" title=" " alt="" coords="39,428,61,493,81,531,109,565,112,568,109,572,105,569,77,534,56,495,34,429"/>
+<area shape="rect" id="Node000022" href="$bsp_8cpp.html#ae5b88d967e3185d98053cf055c8b4f1f" title="Thiết lập kết nối WiFi cho ESP32." alt="" coords="132,629,212,656"/>
+<area shape="poly" id="edge31_Node000001_Node000022" title=" " alt="" coords="37,428,42,465,54,515,76,568,90,593,109,616,120,624,116,628,105,619,86,596,71,571,49,517,37,466,32,429"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="211,296,285,311,375,320,446,323,515,312,600,284,623,272,645,258,648,262,626,277,602,289,516,317,446,328,375,326,285,316,210,301"/>
+<area shape="rect" id="Node000004" href="$bsp_8cpp.html#a3b4b1553d0ac2f8cd65642dc21bf5729" title="Kết nối đến broker MQTT." alt="" coords="472,224,601,251"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="209,276,285,260,374,248,457,240,458,245,374,253,285,265,210,281"/>
+<area shape="rect" id="Node000005" href="$bsp_8cpp.html#a892df614fcae50013ec63c023f2480b3" title="Gửi dữ liệu cảm biến đến broker MQTT." alt="" coords="285,275,424,301"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="210,285,269,285,269,291,210,291"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="601,235,633,235,633,240,601,240"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="424,283,509,275,600,260,633,250,635,256,601,265,510,280,425,288"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="405,272,471,253,472,258,406,277"/>
+<area shape="rect" id="Node000008" href="$bsp_8cpp.html#a98fa184fd5bf99d444c1d0748773215a" title="Đo khoảng cách bằng cảm biến VL53L0X." alt="" coords="291,376,418,403"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="216,387,275,387,275,392,216,392"/>
+<area shape="rect" id="Node000010" href="$bsp_8cpp.html#a2e2b3681757a6e4e53fc0b4d25754a2e" title="Xử lý ngắt cho encoder bên trái." alt="" coords="290,427,419,453"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="237,437,275,437,275,443,237,443"/>
+<area shape="rect" id="Node000011" href="$bsp_8cpp.html#a4e1f7aa401f8d152a61ca560398044b0" title="Xử lý ngắt cho encoder bên phải." alt="" coords="286,477,424,504"/>
+<area shape="poly" id="edge14_Node000009_Node000011" title=" " alt="" coords="224,451,290,470,288,475,222,457"/>
+<area shape="poly" id="edge27_Node000013_Node000002" title=" " alt="" coords="399,186,492,193,601,209,635,219,633,224,600,215,492,198,398,191"/>
+<area shape="poly" id="edge28_Node000013_Node000004" title=" " alt="" coords="399,196,472,217,471,222,398,201"/>
+<area shape="rect" id="Node000014" href="$bsp_8cpp.html#a92d580a0d95b6919b9a87264d7df3279" title="Callback được gọi khi nhận được một thông điệp từ topic MQTT." alt="" coords="502,72,571,99"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="379,171,497,104,499,109,382,175"/>
+<area shape="rect" id="Node000015" href="$bsp_8cpp.html#a90339bd9b73ea558ab199fd8ebe3e8b1" title="Điều khiển động cơ để di chuyển xuống với số bước encoder nhất định." alt="" coords="649,21,701,48"/>
+<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="571,70,633,47,635,52,573,75"/>
+<area shape="rect" id="Node000016" href="$bsp_8cpp.html#a76a15253ad56619fe851a6e314d9ee5a" title="Đặt lại giá trị của bộ đếm encoder." alt="" coords="749,72,890,99"/>
+<area shape="poly" id="edge22_Node000014_Node000016" title=" " alt="" coords="550,70,591,36,618,19,648,7,669,3,690,4,730,16,766,37,795,60,792,64,763,42,728,21,689,9,669,8,649,12,621,24,594,41,553,74"/>
+<area shape="rect" id="Node000017" href="$bsp_8cpp.html#a262738a076360ac36416563c9221091d" title="Điều khiển động cơ để xoay sang trái với số bước encoder nhất định." alt="" coords="655,72,694,99"/>
+<area shape="poly" id="edge20_Node000014_Node000017" title=" " alt="" coords="572,83,639,83,639,88,572,88"/>
+<area shape="rect" id="Node000018" href="$bsp_8cpp.html#a2991f6eaed7763cc48fa26ba1d6e8708" title="Điều khiển động cơ để xoay sang phải với số bước encoder nhất định." alt="" coords="652,123,698,149"/>
+<area shape="poly" id="edge23_Node000014_Node000018" title=" " alt="" coords="573,96,638,120,636,125,571,101"/>
+<area shape="rect" id="Node000019" href="$bsp_8cpp.html#ae705d5ee120f8a3ee7dc59000a739ef9" title="Điều khiển động cơ để di chuyển lên một khoảng bước encoder nhất định." alt="" coords="656,173,694,200"/>
+<area shape="poly" id="edge25_Node000014_Node000019" title=" " alt="" coords="571,97,602,115,652,161,648,165,599,120,568,102"/>
+<area shape="poly" id="edge19_Node000015_Node000016" title=" " alt="" coords="702,41,766,64,764,69,701,46"/>
+<area shape="poly" id="edge21_Node000017_Node000016" title=" " alt="" coords="695,83,734,83,734,88,695,88"/>
+<area shape="poly" id="edge24_Node000018_Node000016" title=" " alt="" coords="697,126,764,102,766,107,699,131"/>
+<area shape="poly" id="edge26_Node000019_Node000016" title=" " alt="" coords="693,172,785,106,788,110,696,176"/>
+</map>

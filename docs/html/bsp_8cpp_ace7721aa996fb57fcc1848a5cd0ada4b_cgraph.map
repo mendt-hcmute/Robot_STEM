@@ -1,0 +1,7 @@
+<map id="setup_encoder_pin" name="setup_encoder_pin">
+<area shape="rect" id="Node000001" title="Thiết lập các chân encoder và ngắt cho bộ mã hóa (encoder)." alt="" coords="5,31,136,57"/>
+<area shape="rect" id="Node000002" href="$bsp_8cpp.html#a2e2b3681757a6e4e53fc0b4d25754a2e" title="Xử lý ngắt cho encoder bên trái." alt="" coords="188,5,318,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,32,172,27,173,32,137,38"/>
+<area shape="rect" id="Node000003" href="$bsp_8cpp.html#a4e1f7aa401f8d152a61ca560398044b0" title="Xử lý ngắt cho encoder bên phải." alt="" coords="184,56,322,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,50,169,55,168,60,136,56"/>
+</map>

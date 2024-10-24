@@ -1,0 +1,24 @@
+<map id="setup_mqtt" name="setup_mqtt">
+<area shape="rect" id="Node000001" title="Thiết lập MQTT với server và callback được xác định trước." alt="" coords="5,208,92,235"/>
+<area shape="rect" id="Node000002" href="$bsp_8cpp.html#a92d580a0d95b6919b9a87264d7df3279" title="Callback được gọi khi nhận được một thông điệp từ topic MQTT." alt="" coords="169,132,238,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,205,160,163,162,168,79,210"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html#a068a04f89f8c4b3979bcd88bf143f5cf" title=" " alt="" coords="316,259,368,285"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="92,221,174,228,269,244,302,254,301,259,267,249,174,234,92,226"/>
+<area shape="rect" id="Node000009" href="$bsp_8cpp.html#a3b4b1553d0ac2f8cd65642dc21bf5729" title="Kết nối đến broker MQTT." alt="" coords="140,259,268,285"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="93,233,147,251,145,256,91,238"/>
+<area shape="rect" id="Node000003" href="$bsp_8cpp.html#a90339bd9b73ea558ab199fd8ebe3e8b1" title="Điều khiển động cơ để di chuyển xuống với số bước encoder nhất định." alt="" coords="316,5,368,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="218,130,313,41,317,45,222,134"/>
+<area shape="rect" id="Node000004" href="$bsp_8cpp.html#a76a15253ad56619fe851a6e314d9ee5a" title="Đặt lại giá trị của bộ đếm encoder." alt="" coords="416,107,558,133"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="227,129,267,109,315,92,345,88,376,89,432,99,431,105,375,95,346,94,317,97,269,113,229,134"/>
+<area shape="rect" id="Node000005" href="$bsp_8cpp.html#a262738a076360ac36416563c9221091d" title="Điều khiển động cơ để xoay sang trái với số bước encoder nhất định." alt="" coords="322,107,362,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="239,136,307,124,308,129,240,142"/>
+<area shape="rect" id="Node000006" href="$bsp_8cpp.html#a2991f6eaed7763cc48fa26ba1d6e8708" title="Điều khiển động cơ để xoay sang phải với số bước encoder nhất định." alt="" coords="319,157,365,184"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="240,149,304,161,303,166,239,154"/>
+<area shape="rect" id="Node000007" href="$bsp_8cpp.html#ae705d5ee120f8a3ee7dc59000a739ef9" title="Điều khiển động cơ để di chuyển lên một khoảng bước encoder nhất định." alt="" coords="323,208,361,235"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="231,157,311,201,308,206,229,162"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="364,30,456,95,453,100,361,35"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="362,117,401,117,401,123,362,123"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="365,160,432,136,433,141,367,165"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="360,206,452,140,456,145,363,211"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="269,269,300,269,300,275,269,275"/>
+</map>

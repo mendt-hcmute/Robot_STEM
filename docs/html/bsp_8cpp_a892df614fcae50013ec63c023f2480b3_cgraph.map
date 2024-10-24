@@ -1,0 +1,8 @@
+<map id="post_data_to_broker" name="post_data_to_broker">
+<area shape="rect" id="Node000001" title="Gửi dữ liệu cảm biến đến broker MQTT." alt="" coords="5,5,145,32"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a068a04f89f8c4b3979bcd88bf143f5cf" title=" " alt="" coords="369,5,421,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,16,353,16,353,21,145,21"/>
+<area shape="rect" id="Node000003" href="$bsp_8cpp.html#a3b4b1553d0ac2f8cd65642dc21bf5729" title="Kết nối đến broker MQTT." alt="" coords="193,31,321,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,26,178,30,177,36,145,31"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="321,30,353,24,354,29,322,35"/>
+</map>

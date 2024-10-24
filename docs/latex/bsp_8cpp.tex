@@ -1,0 +1,649 @@
+\doxysection{src/bsp.cpp File Reference}
+\hypertarget{bsp_8cpp}{}\label{bsp_8cpp}\index{src/bsp.cpp@{src/bsp.cpp}}
+{\ttfamily \#include "{}bsp.\+h"{}}\newline
+Include dependency graph for bsp.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp_8cpp_ae5b88d967e3185d98053cf055c8b4f1f}{setup\+\_\+wifi}} ()
+\begin{DoxyCompactList}\small\item\em Thiết lập kết nối Wi\+Fi cho ESP32. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a6ed12a183e9f32f3272e84420633eced}{setup\+\_\+pwm\+\_\+pin}} ()
+\begin{DoxyCompactList}\small\item\em Thiết lập các chân PWM cho động cơ. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{bsp_8cpp_aaad95fbeb90643c1c856fadf533c689a}{setup\+\_\+i2c\+\_\+pin}} (Adafruit\+\_\+\+VL53\+L0X \&sensor\+\_\+left, Adafruit\+\_\+\+VL53\+L0X \&sensor\+\_\+front)
+\begin{DoxyCompactList}\small\item\em Thiết lập các chân I2C cho hai cảm biến VL53\+L0X. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_ace7721aa996fb57fcc1848a5cd0ada4b}{setup\+\_\+encoder\+\_\+pin}} ()
+\begin{DoxyCompactList}\small\item\em Thiết lập các chân encoder và ngắt cho bộ mã hóa (encoder). \end{DoxyCompactList}\item 
+void IRAM\+\_\+\+ATTR \mbox{\hyperlink{bsp_8cpp_a2e2b3681757a6e4e53fc0b4d25754a2e}{handle\+Encoder\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Xử lý ngắt cho encoder bên trái. \end{DoxyCompactList}\item 
+void IRAM\+\_\+\+ATTR \mbox{\hyperlink{bsp_8cpp_a4e1f7aa401f8d152a61ca560398044b0}{handle\+Encoder\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Xử lý ngắt cho encoder bên phải. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a76a15253ad56619fe851a6e314d9ee5a}{reset\+\_\+encoder\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em Đặt lại giá trị của bộ đếm encoder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_ae705d5ee120f8a3ee7dc59000a739ef9}{up}} (uint32\+\_\+t encoder\+\_\+steps, uint32\+\_\+t timeout\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Điều khiển động cơ để di chuyển lên một khoảng bước encoder nhất định. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a90339bd9b73ea558ab199fd8ebe3e8b1}{down}} (uint32\+\_\+t encoder\+\_\+steps, uint32\+\_\+t timeout\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Điều khiển động cơ để di chuyển xuống với số bước encoder nhất định. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a262738a076360ac36416563c9221091d}{left}} (uint32\+\_\+t encoder\+\_\+steps, uint32\+\_\+t timeout\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Điều khiển động cơ để xoay sang trái với số bước encoder nhất định. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a2991f6eaed7763cc48fa26ba1d6e8708}{right}} (uint32\+\_\+t encoder\+\_\+steps, uint32\+\_\+t timeout\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Điều khiển động cơ để xoay sang phải với số bước encoder nhất định. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_afe2a977e003c131ad4a2804059fd9005}{setup\+\_\+mqtt}} (Pub\+Sub\+Client \&\mbox{\hyperlink{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf}{client}})
+\begin{DoxyCompactList}\small\item\em Thiết lập MQTT với server và callback được xác định trước. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a3b4b1553d0ac2f8cd65642dc21bf5729}{connect\+\_\+to\+\_\+broker}} (Pub\+Sub\+Client \&\mbox{\hyperlink{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf}{client}})
+\begin{DoxyCompactList}\small\item\em Kết nối đến broker MQTT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a892df614fcae50013ec63c023f2480b3}{post\+\_\+data\+\_\+to\+\_\+broker}} (Pub\+Sub\+Client \&\mbox{\hyperlink{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf}{client}}, const char \texorpdfstring{$\ast$}{*}topic, int32\+\_\+t payload, const char \texorpdfstring{$\ast$}{*}sensor)
+\begin{DoxyCompactList}\small\item\em Gửi dữ liệu cảm biến đến broker MQTT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a92d580a0d95b6919b9a87264d7df3279}{callback}} (char \texorpdfstring{$\ast$}{*}topic, byte \texorpdfstring{$\ast$}{*}payload, uint32\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Callback được gọi khi nhận được một thông điệp từ topic MQTT. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{bsp_8cpp_a98fa184fd5bf99d444c1d0748773215a}{measure\+\_\+distance}} (Adafruit\+\_\+\+VL53\+L0X \&sensor, VL53\+L0\+X\+\_\+\+Ranging\+Measurement\+Data\+\_\+t \&measurement)
+\begin{DoxyCompactList}\small\item\em Đo khoảng cách bằng cảm biến VL53\+L0X. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp_8cpp_a29c2aa13f2bbaccceeb33ed39a6ece11}{setup\+\_\+\+OTA}} ()
+\begin{DoxyCompactList}\small\item\em Thiết lập Over-\/\+The-\/\+Air (OTA) cập nhật cho vi điều khiển. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bsp_8cpp_a92d580a0d95b6919b9a87264d7df3279}\index{bsp.cpp@{bsp.cpp}!callback@{callback}}
+\index{callback@{callback}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a92d580a0d95b6919b9a87264d7df3279} 
+void callback (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{topic}{, }\item[{byte \texorpdfstring{$\ast$}{*}}]{payload}{, }\item[{uint32\+\_\+t}]{length}{}\end{DoxyParamCaption})}
+
+
+
+Callback được gọi khi nhận được một thông điệp từ topic MQTT. 
+
+Hàm này xử lý dữ liệu nhận được từ broker MQTT. Nó chuyển đổi payload thành chuỗi ký tự và thực hiện các hành động dựa trên ký tự đầu tiên của thông điệp (lên, xuống, trái, phải). Nó cũng reset giá trị encoder sau khi nhận được thông điệp.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em topic} & Tên của topic đã nhận được thông điệp. \\
+\hline
+\mbox{\texttt{ in}}  & {\em payload} & Dữ liệu nhận được từ broker, dưới dạng mảng byte. \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Chiều dài của payload.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hàm không có giá trị trả về, nhưng sẽ thực thi các hành động và in thông tin gỡ lỗi ra Serial nếu {\ttfamily DEBUG\+\_\+\+MODE} bật. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{bsp_8cpp_a92d580a0d95b6919b9a87264d7df3279_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{bsp_8cpp_a92d580a0d95b6919b9a87264d7df3279_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a3b4b1553d0ac2f8cd65642dc21bf5729}\index{bsp.cpp@{bsp.cpp}!connect\_to\_broker@{connect\_to\_broker}}
+\index{connect\_to\_broker@{connect\_to\_broker}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{connect\_to\_broker()}{connect\_to\_broker()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a3b4b1553d0ac2f8cd65642dc21bf5729} 
+void connect\+\_\+to\+\_\+broker (\begin{DoxyParamCaption}\item[{Pub\+Sub\+Client \&}]{client}{}\end{DoxyParamCaption})}
+
+
+
+Kết nối đến broker MQTT. 
+
+Hàm này cố gắng kết nối đến broker MQTT đã được thiết lập. Nếu kết nối không thành công, nó sẽ thử lại sau mỗi 2 giây. Khi kết nối thành công, hàm sẽ đăng ký (subscribe) vào một topic cụ thể.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & Đối tượng Pub\+Sub\+Client để kết nối đến broker MQTT.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{bsp_8cpp_a3b4b1553d0ac2f8cd65642dc21bf5729_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a3b4b1553d0ac2f8cd65642dc21bf5729_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a90339bd9b73ea558ab199fd8ebe3e8b1}\index{bsp.cpp@{bsp.cpp}!down@{down}}
+\index{down@{down}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{down()}{down()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a90339bd9b73ea558ab199fd8ebe3e8b1} 
+void down (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{encoder\+\_\+steps}{, }\item[{uint32\+\_\+t}]{timeout\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+Điều khiển động cơ để di chuyển xuống với số bước encoder nhất định. 
+
+Hàm này điều khiển động cơ để di chuyển xuống bằng cách điều chỉnh PWM cho các chân điều khiển động cơ. Động cơ sẽ di chuyển cho đến khi đạt số bước encoder hoặc hết thời gian giới hạn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+steps} & Số bước encoder cần đạt được trước khi dừng động cơ. \\
+\hline
+{\em timeout\+\_\+ms} & Thời gian giới hạn để hoàn thành việc di chuyển (tính bằng mili giây).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Sau khi đạt số bước encoder hoặc hết thời gian, hàm sẽ tắt động cơ và đặt lại giá trị encoder.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{bsp_8cpp_a90339bd9b73ea558ab199fd8ebe3e8b1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a90339bd9b73ea558ab199fd8ebe3e8b1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a2e2b3681757a6e4e53fc0b4d25754a2e}\index{bsp.cpp@{bsp.cpp}!handleEncoderLeft@{handleEncoderLeft}}
+\index{handleEncoderLeft@{handleEncoderLeft}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{handleEncoderLeft()}{handleEncoderLeft()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a2e2b3681757a6e4e53fc0b4d25754a2e} 
+void IRAM\+\_\+\+ATTR handle\+Encoder\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Xử lý ngắt cho encoder bên trái. 
+
+Hàm này được gọi khi có sự thay đổi trạng thái trên chân encoder trái. Nó tăng giá trị của biến {\ttfamily encoder\+Left\+Value} mỗi khi chân này thay đổi. Hàm này được gắn với ngắt bằng cách sử dụng {\ttfamily attach\+Interrupt}.
+
+\begin{DoxyNote}{Note}
+Hàm được gán với ngắt thông qua {\ttfamily attach\+Interrupt()} và chạy trong bộ nhớ IRAM do sử dụng {\ttfamily IRAM\+\_\+\+ATTR}.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a2e2b3681757a6e4e53fc0b4d25754a2e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a4e1f7aa401f8d152a61ca560398044b0}\index{bsp.cpp@{bsp.cpp}!handleEncoderRight@{handleEncoderRight}}
+\index{handleEncoderRight@{handleEncoderRight}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{handleEncoderRight()}{handleEncoderRight()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a4e1f7aa401f8d152a61ca560398044b0} 
+void IRAM\+\_\+\+ATTR handle\+Encoder\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Xử lý ngắt cho encoder bên phải. 
+
+Hàm này được gọi khi có sự thay đổi trạng thái trên chân encoder phải. Nó tăng giá trị của biến {\ttfamily encoder\+Right\+Value} mỗi khi chân này thay đổi. Hàm này được gắn với ngắt bằng cách sử dụng {\ttfamily attach\+Interrupt}.
+
+\begin{DoxyNote}{Note}
+Hàm được gán với ngắt thông qua {\ttfamily attach\+Interrupt()} và chạy trong bộ nhớ IRAM do sử dụng {\ttfamily IRAM\+\_\+\+ATTR}.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a4e1f7aa401f8d152a61ca560398044b0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a262738a076360ac36416563c9221091d}\index{bsp.cpp@{bsp.cpp}!left@{left}}
+\index{left@{left}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{left()}{left()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a262738a076360ac36416563c9221091d} 
+void left (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{encoder\+\_\+steps}{, }\item[{uint32\+\_\+t}]{timeout\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+Điều khiển động cơ để xoay sang trái với số bước encoder nhất định. 
+
+Hàm này điều khiển động cơ bên phải để di chuyển sang trái. Động cơ sẽ di chuyển cho đến khi đạt số bước encoder hoặc hết thời gian giới hạn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+steps} & Số bước encoder cần đạt được trước khi dừng động cơ. \\
+\hline
+{\em timeout\+\_\+ms} & Thời gian giới hạn để hoàn thành việc xoay (tính bằng mili giây).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Sau khi đạt số bước encoder hoặc hết thời gian, hàm sẽ tắt động cơ và đặt lại giá trị encoder.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{bsp_8cpp_a262738a076360ac36416563c9221091d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a262738a076360ac36416563c9221091d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a98fa184fd5bf99d444c1d0748773215a}\index{bsp.cpp@{bsp.cpp}!measure\_distance@{measure\_distance}}
+\index{measure\_distance@{measure\_distance}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{measure\_distance()}{measure\_distance()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a98fa184fd5bf99d444c1d0748773215a} 
+uint32\+\_\+t measure\+\_\+distance (\begin{DoxyParamCaption}\item[{Adafruit\+\_\+\+VL53\+L0X \&}]{sensor}{, }\item[{VL53\+L0\+X\+\_\+\+Ranging\+Measurement\+Data\+\_\+t \&}]{measurement}{}\end{DoxyParamCaption})}
+
+
+
+Đo khoảng cách bằng cảm biến VL53\+L0X. 
+
+Hàm này thực hiện đo khoảng cách bằng cảm biến VL53\+L0X và trả về giá trị khoảng cách. Nếu kết quả đo nằm ngoài phạm vi của cảm biến, hàm sẽ trả về giá trị 2000 (hoặc mã lỗi tùy chọn).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sensor} & Tham chiếu đến đối tượng cảm biến VL53\+L0X dùng để đo khoảng cách. \\
+\hline
+\mbox{\texttt{ out}}  & {\em measurement} & Cấu trúc chứa dữ liệu đo của cảm biến, bao gồm giá trị khoảng cách và trạng thái.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Giá trị khoảng cách đo được bằng mm (millimeter). Nếu khoảng cách ngoài phạm vi, trả về 2000 mm. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a98fa184fd5bf99d444c1d0748773215a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a892df614fcae50013ec63c023f2480b3}\index{bsp.cpp@{bsp.cpp}!post\_data\_to\_broker@{post\_data\_to\_broker}}
+\index{post\_data\_to\_broker@{post\_data\_to\_broker}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{post\_data\_to\_broker()}{post\_data\_to\_broker()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a892df614fcae50013ec63c023f2480b3} 
+void post\+\_\+data\+\_\+to\+\_\+broker (\begin{DoxyParamCaption}\item[{Pub\+Sub\+Client \&}]{client}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{topic}{, }\item[{int32\+\_\+t}]{payload}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{sensor}{}\end{DoxyParamCaption})}
+
+
+
+Gửi dữ liệu cảm biến đến broker MQTT. 
+
+Hàm này kiểm tra kết nối MQTT và gửi dữ liệu của cảm biến đến một topic cụ thể trên broker. Nếu kết nối đến broker không thành công, hàm sẽ cố gắng kết nối lại.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client} & Tham chiếu đến đối tượng Pub\+Sub\+Client đã kết nối đến broker. \\
+\hline
+\mbox{\texttt{ in}}  & {\em topic} & Tên của topic trên broker để gửi dữ liệu. \\
+\hline
+\mbox{\texttt{ in}}  & {\em payload} & Dữ liệu của cảm biến, kiểu int32\+\_\+t, sẽ được gửi đến broker. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor} & Chuỗi mô tả cảm biến (ví dụ\+: "{}\+F"{} hoặc "{}\+L"{}) sẽ được gửi cùng dữ liệu.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hàm không có giá trị trả về, nhưng sẽ in thông báo lỗi ra Serial nếu quá trình gửi thất bại (nếu {\ttfamily DEBUG\+\_\+\+MODE} bật). 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a892df614fcae50013ec63c023f2480b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a892df614fcae50013ec63c023f2480b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a76a15253ad56619fe851a6e314d9ee5a}\index{bsp.cpp@{bsp.cpp}!reset\_encoder\_value@{reset\_encoder\_value}}
+\index{reset\_encoder\_value@{reset\_encoder\_value}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{reset\_encoder\_value()}{reset\_encoder\_value()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a76a15253ad56619fe851a6e314d9ee5a} 
+void reset\+\_\+encoder\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Đặt lại giá trị của bộ đếm encoder. 
+
+Hàm này đặt lại cả hai biến {\ttfamily encoder\+Left\+Value} và {\ttfamily encoder\+Right\+Value} về 0, làm mới giá trị của bộ đếm encoder cho cả hai bánh xe trái và phải.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a76a15253ad56619fe851a6e314d9ee5a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a2991f6eaed7763cc48fa26ba1d6e8708}\index{bsp.cpp@{bsp.cpp}!right@{right}}
+\index{right@{right}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{right()}{right()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a2991f6eaed7763cc48fa26ba1d6e8708} 
+void right (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{encoder\+\_\+steps}{, }\item[{uint32\+\_\+t}]{timeout\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+Điều khiển động cơ để xoay sang phải với số bước encoder nhất định. 
+
+Hàm này điều khiển động cơ bên trái để di chuyển sang phải. Động cơ sẽ di chuyển cho đến khi đạt số bước encoder hoặc hết thời gian giới hạn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+steps} & Số bước encoder cần đạt được trước khi dừng động cơ. \\
+\hline
+{\em timeout\+\_\+ms} & Thời gian giới hạn để hoàn thành việc xoay (tính bằng mili giây).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Sau khi đạt số bước encoder hoặc hết thời gian, hàm sẽ tắt động cơ và đặt lại giá trị encoder.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{bsp_8cpp_a2991f6eaed7763cc48fa26ba1d6e8708_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_a2991f6eaed7763cc48fa26ba1d6e8708_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_ace7721aa996fb57fcc1848a5cd0ada4b}\index{bsp.cpp@{bsp.cpp}!setup\_encoder\_pin@{setup\_encoder\_pin}}
+\index{setup\_encoder\_pin@{setup\_encoder\_pin}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{setup\_encoder\_pin()}{setup\_encoder\_pin()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_ace7721aa996fb57fcc1848a5cd0ada4b} 
+void setup\+\_\+encoder\+\_\+pin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Thiết lập các chân encoder và ngắt cho bộ mã hóa (encoder). 
+
+Hàm này cấu hình các chân GPIO để nhận tín hiệu từ bộ mã hóa (encoder) cho bánh xe trái và phải. Nó đặt các chân encoder ở chế độ input (INPUT mode) và gán các ngắt (interrupt) để xử lý khi có thay đổi trạng thái trên các chân này. Mỗi khi chân encoder thay đổi trạng thái, một hàm xử lý ngắt tương ứng sẽ được gọi (handle\+Encoder\+Left và handle\+Encoder\+Right).
+
+\begin{DoxyNote}{Note}
+Hàm xử lý ngắt cho encoder trái là {\ttfamily handle\+Encoder\+Left} và cho encoder phải là {\ttfamily handle\+Encoder\+Right}.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{bsp_8cpp_ace7721aa996fb57fcc1848a5cd0ada4b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{bsp_8cpp_ace7721aa996fb57fcc1848a5cd0ada4b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_aaad95fbeb90643c1c856fadf533c689a}\index{bsp.cpp@{bsp.cpp}!setup\_i2c\_pin@{setup\_i2c\_pin}}
+\index{setup\_i2c\_pin@{setup\_i2c\_pin}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{setup\_i2c\_pin()}{setup\_i2c\_pin()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_aaad95fbeb90643c1c856fadf533c689a} 
+uint8\+\_\+t setup\+\_\+i2c\+\_\+pin (\begin{DoxyParamCaption}\item[{Adafruit\+\_\+\+VL53\+L0X \&}]{sensor\+\_\+left}{, }\item[{Adafruit\+\_\+\+VL53\+L0X \&}]{sensor\+\_\+front}{}\end{DoxyParamCaption})}
+
+
+
+Thiết lập các chân I2C cho hai cảm biến VL53\+L0X. 
+
+Hàm này khởi tạo hai bus I2C với các chân cụ thể và gán hai cảm biến VL53\+L0X vào từng bus. Cảm biến bên trái sẽ được gán vào I2\+C1 (chân SDA\+: 21, SCL\+: 22) và cảm biến phía trước sẽ được gán vào I2\+C2 (chân SDA\+: 16, SCL\+: 4).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+left} & Tham chiếu đến cảm biến khoảng cách bên trái (Adafruit\+\_\+\+VL53\+L0X). \\
+\hline
+\mbox{\texttt{ in}}  & {\em sensor\+\_\+front} & Tham chiếu đến cảm biến khoảng cách phía trước (Adafruit\+\_\+\+VL53\+L0X).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trả về mã lỗi nếu không tìm thấy cảm biến, trả về OK nếu thành công.
+\begin{DoxyItemize}
+\item NOT\+\_\+\+FOUND\+\_\+\+DISTANCE\+\_\+\+SENSOR\+\_\+\+ERROR\+: Không tìm thấy cảm biến VL53\+L0X.
+\item OK\+: Cảm biến được khởi tạo thành công. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{bsp_8cpp_aaad95fbeb90643c1c856fadf533c689a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_afe2a977e003c131ad4a2804059fd9005}\index{bsp.cpp@{bsp.cpp}!setup\_mqtt@{setup\_mqtt}}
+\index{setup\_mqtt@{setup\_mqtt}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{setup\_mqtt()}{setup\_mqtt()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_afe2a977e003c131ad4a2804059fd9005} 
+void setup\+\_\+mqtt (\begin{DoxyParamCaption}\item[{Pub\+Sub\+Client \&}]{client}{}\end{DoxyParamCaption})}
+
+
+
+Thiết lập MQTT với server và callback được xác định trước. 
+
+Hàm này thiết lập máy chủ MQTT và callback xử lý các tin nhắn nhận được. Sau đó, nó sẽ cố gắng kết nối với broker MQTT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & Đối tượng Pub\+Sub\+Client để kết nối và gửi/nhận dữ liệu qua MQTT.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_afe2a977e003c131ad4a2804059fd9005_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{bsp_8cpp_afe2a977e003c131ad4a2804059fd9005_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a29c2aa13f2bbaccceeb33ed39a6ece11}\index{bsp.cpp@{bsp.cpp}!setup\_OTA@{setup\_OTA}}
+\index{setup\_OTA@{setup\_OTA}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{setup\_OTA()}{setup\_OTA()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a29c2aa13f2bbaccceeb33ed39a6ece11} 
+void setup\+\_\+\+OTA (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Thiết lập Over-\/\+The-\/\+Air (OTA) cập nhật cho vi điều khiển. 
+
+Hàm này thiết lập các callback cần thiết để xử lý quá trình cập nhật OTA, bao gồm bắt đầu, tiến trình, kết thúc và xử lý lỗi. Khi kích hoạt, vi điều khiển sẽ có khả năng nhận và cài đặt bản cập nhật chương trình hoặc hệ thống file thông qua giao thức OTA.
+
+Các thông báo trạng thái và lỗi sẽ được in ra Serial nếu {\ttfamily DEBUG\+\_\+\+MODE} đang bật.
+
+\begin{DoxyReturn}{Returns}
+Hàm không trả về giá trị. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{bsp_8cpp_a29c2aa13f2bbaccceeb33ed39a6ece11_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_a6ed12a183e9f32f3272e84420633eced}\index{bsp.cpp@{bsp.cpp}!setup\_pwm\_pin@{setup\_pwm\_pin}}
+\index{setup\_pwm\_pin@{setup\_pwm\_pin}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{setup\_pwm\_pin()}{setup\_pwm\_pin()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_a6ed12a183e9f32f3272e84420633eced} 
+void setup\+\_\+pwm\+\_\+pin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Thiết lập các chân PWM cho động cơ. 
+
+Hàm này cấu hình các chân GPIO để sử dụng cho điều khiển PWM của động cơ. Nó thiết lập chế độ chân, cấu hình các kênh PWM với tần số và độ phân giải được định nghĩa, và gán các chân vào các kênh PWM tương ứng. Cuối cùng, hàm sẽ đặt trạng thái chân điều khiển động cơ (ENABLE\+\_\+L, ENABLE\+\_\+R) thành LOW để tắt động cơ khi khởi động.
+
+\begin{DoxyNote}{Note}
+Cần khai báo trước các chân điều khiển động cơ và các kênh PWM.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{bsp_8cpp_a6ed12a183e9f32f3272e84420633eced_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_ae5b88d967e3185d98053cf055c8b4f1f}\index{bsp.cpp@{bsp.cpp}!setup\_wifi@{setup\_wifi}}
+\index{setup\_wifi@{setup\_wifi}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{setup\_wifi()}{setup\_wifi()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_ae5b88d967e3185d98053cf055c8b4f1f} 
+void setup\+\_\+wifi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Thiết lập kết nối Wi\+Fi cho ESP32. 
+
+Hàm này khởi tạo kết nối Wi\+Fi bằng cách sử dụng SSID và mật khẩu đã định nghĩa trước. Sau khi kết nối thành công, nếu chế độ DEBUG được bật, các thông tin như trạng thái kết nối và địa chỉ IP của ESP32 sẽ được hiển thị trên Serial Monitor.
+
+\begin{DoxyNote}{Note}
+Chức năng này cần phải được gọi trong hàm \doxylink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup()} của chương trình chính.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{bsp_8cpp_ae5b88d967e3185d98053cf055c8b4f1f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp_8cpp_ae705d5ee120f8a3ee7dc59000a739ef9}\index{bsp.cpp@{bsp.cpp}!up@{up}}
+\index{up@{up}!bsp.cpp@{bsp.cpp}}
+\doxysubsubsection{\texorpdfstring{up()}{up()}}
+{\footnotesize\ttfamily \label{bsp_8cpp_ae705d5ee120f8a3ee7dc59000a739ef9} 
+void up (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{encoder\+\_\+steps}{, }\item[{uint32\+\_\+t}]{timeout\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+Điều khiển động cơ để di chuyển lên một khoảng bước encoder nhất định. 
+
+Hàm này điều khiển động cơ trái và phải để di chuyển lên một khoảng bước được chỉ định thông qua số bước encoder ({\ttfamily encoder\+\_\+steps}). Hàm cũng có thể dừng di chuyển nếu đạt đến giới hạn thời gian ({\ttfamily timeout\+\_\+ms}). Khi đạt đến số bước encoder hoặc hết thời gian, động cơ sẽ tắt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+steps} & Số bước của encoder cần đạt được trước khi dừng động cơ. \\
+\hline
+{\em timeout\+\_\+ms} & Thời gian giới hạn để hoàn thành việc di chuyển (tính bằng mili giây).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Sau khi đạt số bước encoder hoặc hết thời gian, hàm sẽ tắt động cơ và đặt lại giá trị encoder.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{bsp_8cpp_ae705d5ee120f8a3ee7dc59000a739ef9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp_8cpp_ae705d5ee120f8a3ee7dc59000a739ef9_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,5 @@
+<map id="connect_to_broker" name="connect_to_broker">
+<area shape="rect" id="Node000001" title="Kết nối đến broker MQTT." alt="" coords="5,5,134,32"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a068a04f89f8c4b3979bcd88bf143f5cf" title=" " alt="" coords="182,5,234,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,16,166,16,166,21,134,21"/>
+</map>

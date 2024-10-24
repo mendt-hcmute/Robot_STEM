@@ -1,0 +1,5 @@
+<map id="sensorTask" name="sensorTask">
+<area shape="rect" id="Node000001" title="Task to handle distance measurements using VL53L0X sensors." alt="" coords="5,5,94,32"/>
+<area shape="rect" id="Node000002" href="$bsp_8cpp.html#a98fa184fd5bf99d444c1d0748773215a" title="Đo khoảng cách bằng cảm biến VL53L0X." alt="" coords="142,5,269,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,16,127,16,127,21,94,21"/>
+</map>

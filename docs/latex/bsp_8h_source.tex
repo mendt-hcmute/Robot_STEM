@@ -1,0 +1,88 @@
+\doxysection{bsp.\+h}
+\hypertarget{bsp_8h_source}{}\label{bsp_8h_source}\index{src/bsp.h@{src/bsp.h}}
+\mbox{\hyperlink{bsp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HEADER\ GUARD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ ********************************************************************************************/}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ BSP\_H\_}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ BSP\_H\_}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/********************************************************************************************}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INCLUDE\ DIRECTIVES\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ ********************************************************************************************/}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <ArduinoOTA.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <WiFi.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <PubSubClient.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <Wire.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <Adafruit\_VL53L0X.h>}\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/********************************************************************************************}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEFINITION\ SECTION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ ********************************************************************************************/}}
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ Pinout\ */}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ ENC\_R\ 34\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Encoder\ Right\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ ENC\_L\ 35\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Encoder\ Left\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ ENABLE\_L\ 14\ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Control\ left\ motor\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ ENABLE\_R\ 32\ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Control\ right\ motor\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ IN\_R2\ 33\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Input\ right\ motor\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ IN\_R1\ 25\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Input\ right\ motor\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ IN\_L1\ 26\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Input\ left\ motor\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ IN\_L2\ 27\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Input\ left\ motor\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{/*\ PWM\ control\ */}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ PWM\_FREQ\ 20000U\ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Frequently\ 20KHz\ */}\textcolor{preprocessor}{\ }}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ PWM\_RESOLUTION\ 8\ \ \ \ \ \ \ }\textcolor{comment}{/*\ Resolution\ 8\ bit\ */}\textcolor{preprocessor}{\ }}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ PWM\_CHANNEL\_R1\ 0\ \ \ \ \ \ \ }\textcolor{comment}{/*\ CHANNEL\ FOR\ PIN\ IN\_R1\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ PWM\_CHANNEL\_R2\ 1\ \ \ \ \ \ \ }\textcolor{comment}{/*\ CHANNEL\ FOR\ PIN\ IN\_R2\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ PWM\_CHANNEL\_L1\ 2\ \ \ \ \ \ \ }\textcolor{comment}{/*\ CHANNEL\ FOR\ PIN\ IN\_L1\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ PWM\_CHANNEL\_L2\ 3\ \ \ \ \ \ \ }\textcolor{comment}{/*\ CHANNEL\ FOR\ PIN\ IN\_L2\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ PWM\_DUTY\_CYCLE\ 180\ \ \ \ \ }\textcolor{comment}{/*\ 75\%\ duty\ cycle\ PWM\ value\ */}\textcolor{preprocessor}{\ }}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{/*\ MQTT\ config\ */}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ MQTT\_SERVER\ "{}broker.mqttdashboard.com"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ MQTT\_PORT\ 1883}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ MQTT\_USER\ "{}chechanh2003"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ MQTT\_PASSWORD\ "{}0576289825"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ TOPIC\_1\ "{}Livingroom/device\_1"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ TOPIC\_2\ "{}Livingroom/device\_2"{}}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*\ Wifi\ config\ */}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ SSID\_WIFI\ "{}TrieuMen"{}}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ PASSWORD\_WIFI\ "{}1111aaaa"{}}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/*\ Other\ */}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ TIMEOUT\ 4000U\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Default\ timeout\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ DEBUG\_MODE\ 1U\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Change\ to\ 0U\ if\ don't\ need\ to\ debug\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ OK\ 0U}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ NOT\_FOUND\_DISTANCE\_SENSOR\_ERROR\ 2U}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{/********************************************************************************************}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FUNCTION\ PROTOTYPE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ ********************************************************************************************/}}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_ae5b88d967e3185d98053cf055c8b4f1f}{setup\_wifi}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Configuration\ for\ wifi*/}}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a6ed12a183e9f32f3272e84420633eced}{setup\_pwm\_pin}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Configuration\ for\ pwm*/}}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_ace7721aa996fb57fcc1848a5cd0ada4b}{setup\_encoder\_pin}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Configuration\ for\ encoder*/}}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a29c2aa13f2bbaccceeb33ed39a6ece11}{setup\_OTA}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Configuration\ for\ update\ firmware\ via\ Over-\/the-\/Air\ */}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ IRAM\_ATTR\ \mbox{\hyperlink{bsp_8h_a2e2b3681757a6e4e53fc0b4d25754a2e}{handleEncoderLeft}}();\ \ \ \ \ \textcolor{comment}{/*\ Interrupt\ function\ to\ address\ change\ state\ in\ encoder\ left\ */}}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ IRAM\_ATTR\ \mbox{\hyperlink{bsp_8h_a4e1f7aa401f8d152a61ca560398044b0}{handleEncoderRight}}();\ \ \ \ \textcolor{comment}{/*\ Interrupt\ to\ address\ change\ state\ in\ encoder\ right\ */}}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a76a15253ad56619fe851a6e314d9ee5a}{reset\_encoder\_value}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Reset\ encoder\ value\ of\ both\ encoders\ */}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_ae705d5ee120f8a3ee7dc59000a739ef9}{up}}(uint32\_t\ encoder\_steps,\ uint32\_t\ timeout\_ms);\ \ \ \ \textcolor{comment}{/*\ Control\ car\ go\ up\ */}}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a90339bd9b73ea558ab199fd8ebe3e8b1}{down}}(uint32\_t\ encoder\_steps,\ uint32\_t\ timeout\_ms);\ \ \textcolor{comment}{/*\ Control\ car\ go\ down\ */}}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a262738a076360ac36416563c9221091d}{left}}(uint32\_t\ encoder\_steps,\ uint32\_t\ timeout\_ms);\ \ \textcolor{comment}{/*\ Control\ car\ turn\ left\ */}}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a2991f6eaed7763cc48fa26ba1d6e8708}{right}}(uint32\_t\ encoder\_steps,\ uint32\_t\ timeout\_ms);\ \textcolor{comment}{/*\ Control\ car\ turn\ right\ */}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_afe2a977e003c131ad4a2804059fd9005}{setup\_mqtt}}(PubSubClient\ \&\mbox{\hyperlink{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf}{client}});}
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a892df614fcae50013ec63c023f2480b3}{post\_data\_to\_broker}}(PubSubClient\ \&\mbox{\hyperlink{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf}{client}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ topic,\ int32\_t\ payload,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sensor);}
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a3b4b1553d0ac2f8cd65642dc21bf5729}{connect\_to\_broker}}(PubSubClient\ \&\mbox{\hyperlink{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf}{client}});}
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bsp_8h_a92d580a0d95b6919b9a87264d7df3279}{callback}}(\textcolor{keywordtype}{char}*\ topic,\ \textcolor{keywordtype}{byte}\ *payload,\ uint32\_t\ length);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ uint8\_t\ \mbox{\hyperlink{bsp_8h_aaad95fbeb90643c1c856fadf533c689a}{setup\_i2c\_pin}}(Adafruit\_VL53L0X\ \&sensor\_left,\ Adafruit\_VL53L0X\ \&sensor\_front);}
+\DoxyCodeLine{00080\ uint32\_t\ \mbox{\hyperlink{bsp_8h_a98fa184fd5bf99d444c1d0748773215a}{measure\_distance}}(Adafruit\_VL53L0X\ \&sensor,\ VL53L0X\_RangingMeasurementData\_t\ \&measurement);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ BSP\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

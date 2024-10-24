@@ -1,0 +1,7 @@
+<map id="handleEncoderRight" name="handleEncoderRight">
+<area shape="rect" id="Node000001" title="Xử lý ngắt cho encoder bên phải." alt="" coords="285,5,423,32"/>
+<area shape="rect" id="Node000002" href="$bsp_8cpp.html#ace7721aa996fb57fcc1848a5cd0ada4b" title="Thiết lập các chân encoder và ngắt cho bộ mã hóa (encoder)." alt="" coords="107,5,237,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="269,21,237,21,237,16,269,16"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,59,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,21,59,21,59,16,91,16"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="connect_to_broker" name="connect_to_broker">
+<area shape="rect" id="Node000001" title="Kết nối đến broker MQTT." alt="" coords="428,23,557,50"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ae204b8353ddcb7c12c66695341624958" title="Task to handle MQTT communication." alt="" coords="112,23,188,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="426,22,380,14,311,8,241,14,188,26,187,21,241,9,311,3,381,9,427,17"/>
+<area shape="rect" id="Node000004" href="$bsp_8cpp.html#a892df614fcae50013ec63c023f2480b3" title="Gửi dữ liệu cảm biến đến broker MQTT." alt="" coords="241,23,380,50"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="413,39,381,39,381,34,413,34"/>
+<area shape="rect" id="Node000005" href="$bsp_8cpp.html#afe2a977e003c131ad4a2804059fd9005" title="Thiết lập MQTT với server và callback được xác định trước." alt="" coords="107,74,193,101"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="422,57,381,65,280,78,194,87,193,81,280,73,380,59,421,51"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,49,59,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,51,60,59,59,54,97,45"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="225,39,188,39,188,34,225,34"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="91,77,59,70,60,65,92,72"/>
+</map>

@@ -1,0 +1,211 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include "{}bsp.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Pub\+Sub\+Client \mbox{\hyperlink{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf}{client}} (\mbox{\hyperlink{main_8cpp_a64f7c60366b0a82c42d7a1dbf4e9505a}{wifi\+Client}})
+\item 
+void \mbox{\hyperlink{main_8cpp_a217451a0ec75f826e5a2933c3268c7c2}{sensor\+Task}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Task to handle distance measurements using VL53\+L0X sensors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ae204b8353ddcb7c12c66695341624958}{mqtt\+Task}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Task to handle MQTT communication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_aa6ee707029b0fb6ea1376ff1c3cdc788}{OTAUpdate\+Task}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Task to handle OTA updates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a97fd430f36f8b065226e2bff9bad1de5}{v\+Application\+Idle\+Hook}} (void)
+\item 
+void \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Adafruit\+\_\+\+VL53\+L0X \mbox{\hyperlink{main_8cpp_a791b21c842e0733b1df0089f60d8a657}{lox1}} = Adafruit\+\_\+\+VL53\+L0X()
+\item 
+Adafruit\+\_\+\+VL53\+L0X \mbox{\hyperlink{main_8cpp_a6c7923d0ab8d904faa98d29a689e9d01}{lox2}} = Adafruit\+\_\+\+VL53\+L0X()
+\item 
+VL53\+L0\+X\+\_\+\+Ranging\+Measurement\+Data\+\_\+t \mbox{\hyperlink{main_8cpp_a73ece2cd4c0e3cfa72680ba73b32ea0d}{measure1}}
+\item 
+VL53\+L0\+X\+\_\+\+Ranging\+Measurement\+Data\+\_\+t \mbox{\hyperlink{main_8cpp_a432c3dc0d34b40b84b35bd62f59bfe7b}{measure2}}
+\item 
+Wi\+Fi\+Client \mbox{\hyperlink{main_8cpp_a64f7c60366b0a82c42d7a1dbf4e9505a}{wifi\+Client}}
+\item 
+Task\+Handle\+\_\+t \mbox{\hyperlink{main_8cpp_a95a80735083a5a0764fa9dc60cd5b0ae}{sensor\+Task\+Handle}} = NULL
+\item 
+Task\+Handle\+\_\+t \mbox{\hyperlink{main_8cpp_a421b9086ef4a7924e104a5fba345d36b}{mqtt\+Task\+Handle}} = NULL
+\item 
+Task\+Handle\+\_\+t \mbox{\hyperlink{main_8cpp_a2fadbecc040a44051e06845d938b64b5}{ota\+Task\+Handle}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf}\index{main.cpp@{main.cpp}!client@{client}}
+\index{client@{client}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{client()}{client()}}
+{\footnotesize\ttfamily \label{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf} 
+Pub\+Sub\+Client client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a64f7c60366b0a82c42d7a1dbf4e9505a}{wifi\+Client}}}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a068a04f89f8c4b3979bcd88bf143f5cf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\index{main.cpp@{main.cpp}!loop@{loop}}
+\index{loop@{loop}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{main_8cpp_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_ae204b8353ddcb7c12c66695341624958}\index{main.cpp@{main.cpp}!mqttTask@{mqttTask}}
+\index{mqttTask@{mqttTask}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mqttTask()}{mqttTask()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae204b8353ddcb7c12c66695341624958} 
+void mqtt\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters}{}\end{DoxyParamCaption})}
+
+
+
+Task to handle MQTT communication. 
+
+This task will continuously check the MQTT connection and publish data when necessary. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae204b8353ddcb7c12c66695341624958_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{main_8cpp_ae204b8353ddcb7c12c66695341624958_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_aa6ee707029b0fb6ea1376ff1c3cdc788}\index{main.cpp@{main.cpp}!OTAUpdateTask@{OTAUpdateTask}}
+\index{OTAUpdateTask@{OTAUpdateTask}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{OTAUpdateTask()}{OTAUpdateTask()}}
+{\footnotesize\ttfamily \label{main_8cpp_aa6ee707029b0fb6ea1376ff1c3cdc788} 
+void OTAUpdate\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters}{}\end{DoxyParamCaption})}
+
+
+
+Task to handle OTA updates. 
+
+This task continuously monitors for OTA updates using the Arduino\+OTA library. It keeps running in an infinite loop, checking for OTA updates. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{main_8cpp_aa6ee707029b0fb6ea1376ff1c3cdc788_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_a217451a0ec75f826e5a2933c3268c7c2}\index{main.cpp@{main.cpp}!sensorTask@{sensorTask}}
+\index{sensorTask@{sensorTask}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sensorTask()}{sensorTask()}}
+{\footnotesize\ttfamily \label{main_8cpp_a217451a0ec75f826e5a2933c3268c7c2} 
+void sensor\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters}{}\end{DoxyParamCaption})}
+
+
+
+Task to handle distance measurements using VL53\+L0X sensors. 
+
+This task will continuously measure the distance using both sensors and store the values. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{main_8cpp_a217451a0ec75f826e5a2933c3268c7c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{main_8cpp_a217451a0ec75f826e5a2933c3268c7c2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\index{main.cpp@{main.cpp}!setup@{setup}}
+\index{setup@{setup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_a97fd430f36f8b065226e2bff9bad1de5}\index{main.cpp@{main.cpp}!vApplicationIdleHook@{vApplicationIdleHook}}
+\index{vApplicationIdleHook@{vApplicationIdleHook}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{vApplicationIdleHook()}{vApplicationIdleHook()}}
+{\footnotesize\ttfamily \label{main_8cpp_a97fd430f36f8b065226e2bff9bad1de5} 
+void v\+Application\+Idle\+Hook (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a791b21c842e0733b1df0089f60d8a657}\index{main.cpp@{main.cpp}!lox1@{lox1}}
+\index{lox1@{lox1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{lox1}{lox1}}
+{\footnotesize\ttfamily \label{main_8cpp_a791b21c842e0733b1df0089f60d8a657} 
+Adafruit\+\_\+\+VL53\+L0X lox1 = Adafruit\+\_\+\+VL53\+L0X()}
+
+\Hypertarget{main_8cpp_a6c7923d0ab8d904faa98d29a689e9d01}\index{main.cpp@{main.cpp}!lox2@{lox2}}
+\index{lox2@{lox2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{lox2}{lox2}}
+{\footnotesize\ttfamily \label{main_8cpp_a6c7923d0ab8d904faa98d29a689e9d01} 
+Adafruit\+\_\+\+VL53\+L0X lox2 = Adafruit\+\_\+\+VL53\+L0X()}
+
+\Hypertarget{main_8cpp_a73ece2cd4c0e3cfa72680ba73b32ea0d}\index{main.cpp@{main.cpp}!measure1@{measure1}}
+\index{measure1@{measure1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{measure1}{measure1}}
+{\footnotesize\ttfamily \label{main_8cpp_a73ece2cd4c0e3cfa72680ba73b32ea0d} 
+VL53\+L0\+X\+\_\+\+Ranging\+Measurement\+Data\+\_\+t measure1}
+
+\Hypertarget{main_8cpp_a432c3dc0d34b40b84b35bd62f59bfe7b}\index{main.cpp@{main.cpp}!measure2@{measure2}}
+\index{measure2@{measure2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{measure2}{measure2}}
+{\footnotesize\ttfamily \label{main_8cpp_a432c3dc0d34b40b84b35bd62f59bfe7b} 
+VL53\+L0\+X\+\_\+\+Ranging\+Measurement\+Data\+\_\+t measure2}
+
+\Hypertarget{main_8cpp_a421b9086ef4a7924e104a5fba345d36b}\index{main.cpp@{main.cpp}!mqttTaskHandle@{mqttTaskHandle}}
+\index{mqttTaskHandle@{mqttTaskHandle}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mqttTaskHandle}{mqttTaskHandle}}
+{\footnotesize\ttfamily \label{main_8cpp_a421b9086ef4a7924e104a5fba345d36b} 
+Task\+Handle\+\_\+t mqtt\+Task\+Handle = NULL}
+
+\Hypertarget{main_8cpp_a2fadbecc040a44051e06845d938b64b5}\index{main.cpp@{main.cpp}!otaTaskHandle@{otaTaskHandle}}
+\index{otaTaskHandle@{otaTaskHandle}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{otaTaskHandle}{otaTaskHandle}}
+{\footnotesize\ttfamily \label{main_8cpp_a2fadbecc040a44051e06845d938b64b5} 
+Task\+Handle\+\_\+t ota\+Task\+Handle = NULL}
+
+\Hypertarget{main_8cpp_a95a80735083a5a0764fa9dc60cd5b0ae}\index{main.cpp@{main.cpp}!sensorTaskHandle@{sensorTaskHandle}}
+\index{sensorTaskHandle@{sensorTaskHandle}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sensorTaskHandle}{sensorTaskHandle}}
+{\footnotesize\ttfamily \label{main_8cpp_a95a80735083a5a0764fa9dc60cd5b0ae} 
+Task\+Handle\+\_\+t sensor\+Task\+Handle = NULL}
+
+\Hypertarget{main_8cpp_a64f7c60366b0a82c42d7a1dbf4e9505a}\index{main.cpp@{main.cpp}!wifiClient@{wifiClient}}
+\index{wifiClient@{wifiClient}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{wifiClient}{wifiClient}}
+{\footnotesize\ttfamily \label{main_8cpp_a64f7c60366b0a82c42d7a1dbf4e9505a} 
+Wi\+Fi\+Client wifi\+Client}
+
