@@ -5,8 +5,11 @@ File Structure
 The project is organized into three main files:
 
 bsp.c: This file contains the definitions of each API function.
+
 bsp.h: This header file provides the function prototypes for the API functions.
+
 main.c: This file includes the application code, which calls the API functions. This structure simplifies code management and allows for easy switching to different boards with alternative Board Support Packages (BSP).
+
 Additional Information
 The running code will be demonstrated in an application built with PyQt, and the sessions will be recorded and uploaded to YouTube. You can view the recordings at the following link: 
 https://www.youtube.com/playlist?list=PLv-CToiz_NVD0-DlUOmsgtuEegaxUofKw
